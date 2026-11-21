@@ -1,0 +1,3 @@
+C:\Users\Wills\source\repos\virtualAnt\virtualAnt\obj\Debug\virtualAnt.njsproj.AssemblyReference.cache
+C:\Users\Wills\source\repos\virtualAnt\virtualAnt\obj\Debug\virtualAnt.njsproj.CoreCompileInputs.cache
+C:\Users\Wills\source\repos\virtualAnt\virtualAnt\bin\Microsoft.NodejsTools.WebRole.dll

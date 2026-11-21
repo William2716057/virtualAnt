@@ -1,0 +1,97 @@
+:root {
+    --bg: #cfe8f5;
+    --fg: #1b2a1b;
+    --chip: rgba(255,255,255,.75);
+    color-scheme: light;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top,0px);
+    padding-bottom: env(safe-area-inset-bottom,0px)
+}
+
+@media (prefers-color-scheme:dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #10182a;
+        --fg: #e8f0e8;
+        --chip: rgba(20,28,20,.75);
+        color-scheme: dark
+    }
+}
+
+:root[data-theme="dark"] {
+    --bg: #10182a;
+    --fg: #e8f0e8;
+    --chip: rgba(20,28,20,.75);
+    color-scheme: dark
+}
+
+html, body {
+    height: 100%;
+    margin: 0
+}
+
+body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: system-ui,-apple-system,Segoe UI,sans-serif;
+    overflow: hidden
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+#hud {
+    position: fixed;
+    left: 12px;
+    top: calc(env(safe-area-inset-top,0px) + 12px);
+    background: var(--chip);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px
+}
+
+#pad {
+    position: fixed;
+    right: 14px;
+    bottom: calc(env(safe-area-inset-bottom,0px) + 14px);
+    display: grid;
+    grid-template-columns: repeat(3,52px);
+    grid-template-rows: repeat(2,52px);
+    gap: 6px;
+    touch-action: none
+}
+
+    #pad button {
+        border: 0;
+        border-radius: 10px;
+        background: var(--chip);
+        color: var(--fg);
+        font-size: 22px;
+        touch-action: none
+    }
+
+        #pad button:active {
+            filter: brightness(.8)
+        }
+
+    #pad .u {
+        grid-column: 2;
+        grid-row: 1
+    }
+
+    #pad .l {
+        grid-column: 1;
+        grid-row: 2
+    }
+
+    #pad .d {
+        grid-column: 2;
+        grid-row: 2
+    }
+
+    #pad .r {
+        grid-column: 3;
+        grid-row: 2
+    }
